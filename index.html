@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<article class="profile-card" data-testid="test-profile-card">
+
+  <!-- Avatar -->
+  <figure class="avatar-wrap" data-testid="test-avatar-figure">
+    <img
+      id="avatarImg"
+      class="avatar-img"
+      src="https://i.pravatar.cc/240?img=32"
+      alt="Profile photo of Amara Okonkwo"
+      data-testid="test-user-avatar"
+    />
+    <figcaption>Profile avatar</figcaption>
+    <label class="avatar-upload-label" for="avatarUpload" data-testid="test-avatar-upload-label">
+      Change photo
+    </label>
+    <input
+      type="file"
+      id="avatarUpload"
+      accept="image/*"
+      class="sr-only"
+      aria-label="Upload a new profile photo"
+      data-testid="test-avatar-upload-input"
+    />
+  </figure>
+
+  <!-- Card body -->
+  <div class="card-body">
+
+    <header>
+      <h2 class="user-name" aria-label="User name: Amara Okonkwo" data-testid="test-user-name">
+        Amara Okonkwo
+      </h2>
+    </header>
+
+    <p class="user-bio" data-testid="test-user-bio">
+      Product designer who thrives at the intersection of empathy and systems thinking. Building inclusive digital experiences from Lagos to the world.
+    </p>
+
+    <!-- Epoch time -->
+    <span
+      class="time-badge"
+      role="timer"
+      aria-live="polite"
+      aria-label="Current epoch time in milliseconds"
+      data-testid="test-user-time"
+      id="epochTime"
+    ></span>
+
+    <hr class="divider" />
+
+    <!-- Social links -->
+    <nav class="social-nav" aria-label="Social media links" data-testid="test-user-social-links">
+      <a
+        class="social-link"
+        href="https://twitter.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter profile"
+        data-testid="test-user-social-twitter"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+        Twitter
+      </a>
+      <a
+        class="social-link"
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile"
+        data-testid="test-user-social-github"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a
+        class="social-link"
+        href="https://linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
+        data-testid="test-user-social-linkedin"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a
+        class="social-link"
+        href="https://dribbble.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Dribbble profile"
+        data-testid="test-user-social-dribbble"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 12 6.9 18.5"/></svg>
+        Dribbble
+      </a>
+    </nav>
+
+    <hr class="divider" />
+
+    <!-- Hobbies -->
+    <section class="list-section" aria-label="Hobbies" data-testid="test-user-hobbies">
+      <h3>Hobbies</h3>
+      <ul class="tag-list tag-list--hobbies">
+        <li data-testid="test-hobby-photography">Photography</li>
+        <li data-testid="test-hobby-hiking">Hiking</li>
+        <li data-testid="test-hobby-cooking">Cooking</li>
+        <li data-testid="test-hobby-open-source">Open Source</li>
+        <li data-testid="test-hobby-journaling">Journaling</li>
+      </ul>
+    </section>
+
+    <!-- Dislikes -->
+    <section class="list-section" aria-label="Dislikes" data-testid="test-user-dislikes">
+      <h3>Dislikes</h3>
+      <ul class="tag-list tag-list--dislikes">
+        <li data-testid="test-dislike-spam">Spam emails</li>
+        <li data-testid="test-dislike-loud-chewing">Loud chewing</li>
+        <li data-testid="test-dislike-dark-patterns">Dark patterns</li>
+      </ul>
+    </section>
+
+  </div>
+</article>
+
+</body>
+</html>
